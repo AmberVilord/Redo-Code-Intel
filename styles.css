@@ -278,6 +278,8 @@ body.theme-dark .timeline-viewport::-webkit-scrollbar-thumb {
   min-width: 240px;
   max-width: 260px;
   flex: 0 0 auto;
+  position: relative;
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   scroll-snap-align: start;
 }
@@ -315,6 +317,26 @@ body.theme-dark .timeline-viewport::-webkit-scrollbar-thumb {
 .card p {
   font-size: 14px;
   line-height: 1.6;
+  margin: 0;
+  padding: 12px 14px;
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+body.theme-dark .card p {
+  background: rgba(11, 15, 31, 0.7);
+}
+
+.card:hover p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card:nth-child(1) { animation-delay: 0.1s; }
@@ -382,9 +404,11 @@ body.theme-dark .timeline-viewport::-webkit-scrollbar-thumb {
   padding: 16px 24px;
   border-radius: 16px;
   text-align: center;
-  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
   box-shadow: var(--glow-strong), var(--shadow);
-  letter-spacing: 0.3px;
+  letter-spacing: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -547,6 +571,8 @@ body.theme-dark .timeline-viewport::-webkit-scrollbar-thumb {
 
   .timeline-viewport {
     height: 320px;
+    padding-top: 1in;
+    padding-bottom: 1in;
   }
 
   .side-nav ul {
