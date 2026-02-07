@@ -6,7 +6,7 @@
   --page-bg: #f4f7ff;
   --page-bg-accent: #dfe9ff;
   --text-color: #0f172a;
-  --card-bg: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.88);
   --bubble-bg: #ffffff;
   --nav-bg: rgba(255, 255, 255, 0.7);
   --footer-bg: #0b57d0;
@@ -20,7 +20,7 @@ body.theme-dark {
   --page-bg: #05070f;
   --page-bg-accent: #0f1a33;
   --text-color: #f8fafc;
-  --card-bg: #0b0f1f;
+  --card-bg: rgba(11, 15, 31, 0.88);
   --bubble-bg: #0d1426;
   --nav-bg: rgba(12, 18, 36, 0.75);
   --footer-bg: #0b57d0;
@@ -239,6 +239,10 @@ body.theme-dark .thought-bubble::after {
   scroll-behavior: smooth;
 }
 
+body.theme-dark .timeline-viewport {
+  scrollbar-color: rgba(64, 124, 255, 0.7) transparent;
+}
+
 .timeline-viewport::-webkit-scrollbar {
   height: 6px;
 }
@@ -246,6 +250,10 @@ body.theme-dark .thought-bubble::after {
 .timeline-viewport::-webkit-scrollbar-thumb {
   background: var(--intel-blue);
   border-radius: 999px;
+}
+
+body.theme-dark .timeline-viewport::-webkit-scrollbar-thumb {
+  background: rgba(64, 124, 255, 0.7);
 }
 
 .timeline-track {
@@ -375,7 +383,7 @@ body.theme-dark .thought-bubble::after {
   border-radius: 16px;
   text-align: center;
   font-weight: 600;
-  box-shadow: var(--glow), var(--shadow);
+  box-shadow: var(--glow-strong), var(--shadow);
   letter-spacing: 0.3px;
   margin-left: auto;
   margin-right: auto;
