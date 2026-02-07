@@ -123,19 +123,19 @@ body.theme-dark .thought-bubble::after {
 }
 
 .theme-light .icon-sun {
-  opacity: 1;
+  opacity: 0;
 }
 
 .theme-light .icon-moon {
-  opacity: 0;
+  opacity: 1;
 }
 
 .theme-dark .icon-sun {
-  opacity: 0;
+  opacity: 1;
 }
 
 .theme-dark .icon-moon {
-  opacity: 1;
+  opacity: 0;
   stroke: rgba(255, 255, 255, 0.75);
   fill: rgba(255, 255, 255, 0.75);
 }
