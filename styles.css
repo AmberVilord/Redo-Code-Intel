@@ -221,6 +221,7 @@ body.theme-dark .thought-bubble::after {
   display: flex;
   justify-content: stretch;
   align-items: flex-start;
+  margin-top: 1.5in;
 }
 
 .timeline-viewport {
@@ -229,7 +230,7 @@ body.theme-dark .thought-bubble::after {
   height: 360px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 0 28px 12px;
+  padding: 0 28px 4px;
   mask-image: linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%);
   background: transparent;
   border: none;
@@ -414,7 +415,7 @@ body.theme-dark .card p {
 }
 
 .credit {
-  margin-top: 12px;
+  margin-top: -84px;
   margin-bottom: 16px;
   width: fit-content;
   max-width: 100%;
@@ -424,6 +425,9 @@ body.theme-dark .card p {
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: var(--glow);
   color: var(--text-color);
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .credit-text {
@@ -582,5 +586,16 @@ body.theme-dark .card p {
 
   .side-nav a {
     width: 100%;
+  }
+
+  .footer-note {
+    margin-bottom: 16px;
+  }
+
+  .credit {
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }
