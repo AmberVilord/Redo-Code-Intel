@@ -206,6 +206,8 @@ body.theme-dark {
   padding-bottom: 12px;
   mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   scrollbar-color: var(--intel-blue) transparent;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 .timeline-viewport::-webkit-scrollbar {
@@ -238,12 +240,28 @@ body.theme-dark {
   min-width: 240px;
   max-width: 260px;
   flex: 0 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 30px rgba(64, 124, 255, 0.45), 0 20px 45px rgba(15, 23, 42, 0.18);
 }
 
 .card h3 {
   color: var(--intel-blue);
   font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.card h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: rgba(11, 87, 208, 0.7);
   margin-bottom: 12px;
+  font-weight: 700;
 }
 
 .card-photo {
@@ -273,8 +291,7 @@ body.theme-dark {
 .card:nth-child(9) { animation-delay: 0.9s; }
 
 .side-nav {
-  position: sticky;
-  top: 40px;
+  position: relative;
   background: var(--intel-blue);
   border-radius: 24px;
   padding: 16px 18px;
@@ -382,7 +399,6 @@ body.theme-dark {
 
   .side-nav {
     position: relative;
-    top: 0;
   }
 
   .timeline-viewport {
