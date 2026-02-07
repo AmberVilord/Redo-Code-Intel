@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intel Timeline</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="theme-light">
+    <button class="theme-toggle" type="button" aria-label="Toggle theme">
+      <span class="icon icon-sun" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"></path>
+        </svg>
+      </span>
+      <span class="icon icon-moon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img">
+          <path d="M21 14.5A9 9 0 1 1 9.5 3 7 7 0 0 0 21 14.5Z"></path>
+        </svg>
+      </span>
+    </button>
+
+    <main class="page">
+      <section class="bubble-banner" aria-label="Intel thought bubble banner">
+        <div class="thought-bubble">
+          <div class="intel-logo" aria-hidden="true">intel</div>
+          <div class="banner-text">
+            <p class="banner-kicker">Placeholder Banner</p>
+            <h1>Placeholder Heading</h1>
+            <p class="banner-body">
+              Placeholder body copy for the Intel thought bubble banner.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline" aria-label="Scrolling timeline">
+        <div class="timeline-viewport">
+          <div class="timeline-track">
+            <article class="card">
+              <h3>Placeholder Heading 01</h3>
+              <div class="card-photo">Placeholder Photo</div>
+              <p>Placeholder body for timeline card content.</p>
+            </article>
+            <article class="card">
+              <h3>Placeholder Heading 02</h3>
+              <div class="card-photo">Placeholder Photo</div>
+              <p>Placeholder body for timeline card content.</p>
+            </article>
+            <article class="card">
+              <h3>Placeholder Heading 03</h3>
+              <div class="card-photo">Placeholder Photo</div>
+              <p>Placeholder body for timeline card content.</p>
+            </article>
+            <article class="card">
+              <h3>Placeholder Heading 04</h3>
+              <div class="card-photo">Placeholder Photo</div>
+              <p>Placeholder body for timeline card content.</p>
+            </article>
+            <article class="card">
+              <h3>Placeholder Heading 05</h3>
+              <div class="card-photo">Placeholder Photo</div>
+              <p>Placeholder body for timeline card content.</p>
+            </article>
+            <article class="card">
+              <h3>Placeholder Heading 06</h3>
+              <div class="card-photo">Placeholder Photo</div>
+              <p>Placeholder body for timeline card content.</p>
+            </article>
+            <article class="card">
+              <h3>Placeholder Heading 07</h3>
+              <div class="card-photo">Placeholder Photo</div>
+              <p>Placeholder body for timeline card content.</p>
+            </article>
+            <article class="card">
+              <h3>Placeholder Heading 08</h3>
+              <div class="card-photo">Placeholder Photo</div>
+              <p>Placeholder body for timeline card content.</p>
+            </article>
+            <article class="card">
+              <h3>Placeholder Heading 09</h3>
+              <div class="card-photo">Placeholder Photo</div>
+              <p>Placeholder body for timeline card content.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <nav class="side-nav" aria-label="Intel navigation">
+        <h2>Navigate Intel</h2>
+        <ul>
+          <li><a href="https://www.intel.com/content/www/us/en/products/overview.html" target="_blank" rel="noreferrer">Products</a></li>
+          <li><a href="https://www.intel.com/content/www/us/en/support.html" target="_blank" rel="noreferrer">Support</a></li>
+          <li><a href="https://www.intel.com/content/www/us/en/solutions/overview.html" target="_blank" rel="noreferrer">Solutions</a></li>
+          <li><a href="https://www.intel.com/content/www/us/en/developer/overview.html" target="_blank" rel="noreferrer">Developers</a></li>
+          <li><a href="https://www.intel.com/content/www/us/en/partner-alliance/overview.html" target="_blank" rel="noreferrer">Partners</a></li>
+          <li><a href="https://www.intel.com/content/www/us/en/foundry/overview.html" target="_blank" rel="noreferrer">Foundry</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <footer class="footer-note">
+      menu auto scrolls. hover to pause or scroll to explore.
+    </footer>
+
+    <script>
+      const toggleButton = document.querySelector(".theme-toggle");
+      toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("theme-dark");
+        document.body.classList.toggle("theme-light");
+      });
+    </script>
+  </body>
+</html>
