@@ -262,11 +262,6 @@ body.theme-dark .timeline-viewport::-webkit-scrollbar-thumb {
   flex-direction: row;
   gap: 20px;
   padding: 0 48px;
-  animation: scrollLeft 28s linear infinite;
-}
-
-.timeline-viewport:hover .timeline-track {
-  animation-play-state: paused;
 }
 
 .card {
@@ -288,6 +283,7 @@ body.theme-dark .timeline-viewport::-webkit-scrollbar-thumb {
 .card:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 0 30px rgba(64, 124, 255, 0.45), 0 20px 45px rgba(15, 23, 42, 0.18);
+  z-index: 2;
 }
 
 .card h3 {
@@ -554,7 +550,6 @@ body.theme-dark .card p {
 
   .timeline-track {
     flex-direction: column;
-    animation: scrollUp 24s linear infinite;
   }
 
   .card {
