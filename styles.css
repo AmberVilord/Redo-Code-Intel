@@ -358,21 +358,22 @@ body.theme-dark .card p {
 .side-nav {
   position: relative;
   background: var(--intel-blue);
-  border-radius: 22px;
-  padding: 16px 24px;
+  border-radius: 0 0 22px 0;
+  padding: 0 40px;
   box-shadow: var(--glow-strong), var(--shadow);
   backdrop-filter: blur(12px);
-  width: 100%;
+  width: calc(100% + 80px);
   max-width: 100%;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  margin-right: 0;
+  margin: -40px -40px 0;
 }
 
 .side-nav h2 {
-  font-size: 16px;
+  font-size: 24px;
   color: #ffffff;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -536,6 +537,11 @@ body.theme-dark .card p {
     position: relative;
     flex-direction: column;
     align-items: flex-start;
+    height: auto;
+    padding: 16px 24px;
+    width: 100%;
+    margin: 0;
+    border-radius: 22px;
   }
 
   .side-nav ul {
