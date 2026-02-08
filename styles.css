@@ -62,8 +62,8 @@ body.theme-dark .thought-bubble::after {
 
 .page {
   display: grid;
-  grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.6fr);
-  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
   gap: 32px;
   align-items: start;
 }
@@ -74,15 +74,21 @@ body.theme-dark .thought-bubble::after {
 }
 
 .bubble-banner {
-  grid-column: 1;
+  grid-column: 1 / -1;
   grid-row: 2;
-  max-width: 440px;
+  max-width: 520px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
   justify-self: start;
 }
 
 .timeline {
-  grid-column: 2;
-  grid-row: 2;
+  grid-column: 1 / -1;
+  grid-row: 3;
+  max-width: calc(980px + 3.5in);
+  width: 100%;
+  justify-self: center;
 }
 
 .theme-toggle {
@@ -221,16 +227,17 @@ body.theme-dark .thought-bubble::after {
   display: flex;
   justify-content: stretch;
   align-items: flex-start;
-  margin-top: 1.5in;
+  margin-top: 44px;
+  padding: 12px 0 20px;
 }
 
 .timeline-viewport {
   width: 100%;
   max-width: 100%;
-  height: 360px;
+  height: auto;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 0 28px 4px;
+  padding: 30px 36px 18px;
   mask-image: linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%);
   background: transparent;
   border: none;
@@ -268,11 +275,11 @@ body.theme-dark .timeline-viewport::-webkit-scrollbar-thumb {
   background: var(--card-bg);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: var(--glow), var(--shadow);
+  box-shadow: var(--shadow);
   border: 1px solid rgba(64, 124, 255, 0.2);
   animation: fadeInUp 0.8s ease forwards;
-  min-width: 240px;
-  max-width: 260px;
+  min-width: 270px;
+  max-width: 290px;
   flex: 0 0 auto;
   position: relative;
   overflow: hidden;
@@ -282,7 +289,7 @@ body.theme-dark .timeline-viewport::-webkit-scrollbar-thumb {
 
 .card:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 0 30px rgba(64, 124, 255, 0.45), 0 20px 45px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 0 18px rgba(11, 87, 208, 0.6), 0 0 30px rgba(64, 124, 255, 0.45), 0 16px 36px rgba(15, 23, 42, 0.18);
   z-index: 2;
 }
 
@@ -315,13 +322,15 @@ body.theme-dark .timeline-viewport::-webkit-scrollbar-thumb {
   font-size: 14px;
   line-height: 1.6;
   margin: 0;
-  padding: 12px 14px;
+  padding: 18px;
   position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.7);
+  inset: 0;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.3s ease, transform 0.3s ease;
